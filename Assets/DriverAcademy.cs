@@ -9,9 +9,6 @@ public class DriverAcademy : Academy
     void Start()
     {
 
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 300;
-        Time.timeScale = 20;
         
     }
 

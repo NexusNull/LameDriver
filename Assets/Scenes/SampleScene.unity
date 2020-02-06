@@ -1386,20 +1386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b76166954a9184fb7c0b8c088ba27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrainingConfiguration:
-    width: 30
-    height: 30
-    qualityLevel: 1
-    timeScale: 100
-    targetFrameRate: -1
-  m_InferenceConfiguration:
-    width: 1280
-    height: 720
-    qualityLevel: 1
-    timeScale: 1
-    targetFrameRate: 60
-  resetParameters:
-    m_ResetParameters: []
 --- !u!4 &1374118827
 Transform:
   m_ObjectHideFlags: 0
@@ -1659,9 +1645,7 @@ GameObject:
   - component: {fileID: 1768854264}
   - component: {fileID: 1768854269}
   - component: {fileID: 1768854268}
-  - component: {fileID: 1768854270}
   - component: {fileID: 1768854271}
-  - component: {fileID: 1768854272}
   m_Layer: 0
   m_Name: Driver
   m_TagString: Untagged
@@ -1760,7 +1744,7 @@ MonoBehaviour:
     maxStep: 0
     resetOnDone: 1
     onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 10
+    numberOfActionsBetweenDecisions: 1
   road: {fileID: 1355013297}
   MaxRayDistance: 50
   turnStrength: 3
@@ -1777,32 +1761,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 0
+    vectorObservationSize: 5
     numStackedVectorObservations: 1
     vectorActionSize: 01000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 37c2fcdd0fe6a5a45bee6f79a10ff163, type: 3}
   m_InferenceDevice: 0
-  m_UseHeuristic: 0
+  m_BehaviorType: 0
   m_BehaviorName: My Behavior
---- !u!114 &1768854270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768854263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282f342c2ab144bf38be65d4d0c4e07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 96772855}
-  sensorName: CameraSensor
-  width: 30
-  height: 30
-  grayscale: 0
 --- !u!54 &1768854271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1819,23 +1786,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1768854272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768854263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132e1194facb64429b007ea1edf562d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderTexture: {fileID: 8400000, guid: cd3af1c3b3e83904fad453ddfaa1dfa9, type: 2}
-  sensorName: RenderTextureSensor
-  width: 30
-  height: 30
-  grayscale: 0
 --- !u!4 &1804931981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4079577874936380573, guid: cf89c850bfae3a4418dfb6358d54cdd9,
